@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // var num1 = window.prompt('请输入第一个数')
+        // var num2 = window.prompt('请输入第二个数')
+
+        // var num3 = num1*1 + num2*1;
+        // console.log(num3);
+
+        // 声明一个function
+        function sum(num1,num2){
+            //  接受的地方  叫形参
+            var num3 = num1*1 + num2*1;
+            return num3;
+            //函数中遇到retrun关键字，直接返回，后面的内容不会继续执行
+            console.log(333);
+        }
+
+        // 函数的两种表达方法
+        // 1.function a(){函数体}
+        // 2.var a = function(){函数体}
+        // 第二种函数提升，会出现错误（由于var能提升变量）
+
+        // 方法调用
+        // 实参：实际参数
+        var num4 = sum(2,5);
+        console.log('111');
+        console.log('222');
+
+        console.log(num4);
+
+        // 作用域
+        // 局部变量 全局变量
+        
+        // var变量提升
+        // console.log(a);
+        // var a=1;
+        // console.log(a);
+
+        // 相当于
+
+        // var a
+        // console.log(a);
+        // a=1;
+        // console.log(a);
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div{
+            width: 0;
+            border: 4px solid #bbb;
+            border-left-color: transparent /*  透明  */;
+            border-right-color: transparent;
+            border-bottom-color: transparent;
+            display: block;
+            margin: 0 auto;
+        }
+        div:hover{
+            /* 过度效果 */
+            transition: all 0.1s 0s ease;
+            /* 变换 */
+            transform: rotate(180deg);
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+</body>
+</html>

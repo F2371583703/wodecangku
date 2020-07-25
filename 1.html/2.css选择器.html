@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!-- 标签选择器 -->
+    <style>
+
+        div{
+            width: 100px;
+            height: 100px;
+            background: red;
+        }
+        /* id选择器
+            #id名称
+        */
+        #content{
+            width: 100px;
+            height: 100px;
+            background: green;
+        }
+        /* 
+           类选择器/class选择器
+           .类型 
+        */
+        .list{
+            width: 200px;
+            height: 200px;
+            background: blue;  
+            }
+        /* 子代选择器
+            只能选中儿子
+        */
+        ul>li{
+            color: red;
+        }
+        /* 后代选择器
+            选择亲子代，
+            选中儿子或孙子
+        
+        */
+        p span{
+            color:red;
+        }
+        /* 分组选择器, */
+        #conent,.list{
+            color: saddlebrown;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+    <!-- id 名称必须是唯一的 页面内不可以重复 -->
+    <div id="content">啥也不是</div>
+    <p class="list">段落</p>
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+    </ul>
+    <p>
+        <a href="">
+            a1
+        </a>
+        <span>span1</span>
+        <a href="">a2
+            <span>
+                span2
+            </span>
+        </a>
+    </p>
+
+</body>
+</html>

@@ -1,0 +1,348 @@
+/* 搜索 */
+#search{
+    width: 100%;
+}
+#search-wrapper{
+    width: 1230px;
+    height: 130px;
+    margin: 0 auto;
+    position: relative;
+}
+#search-logo{
+    position: absolute;
+    top: 0px;
+    left: -20px;
+    
+}
+#search-logo>img{
+    width: 240px;
+    height: 130px;
+}
+#search-container{
+    width: 625px;
+    margin: 0 auto;
+    padding-top: 38px;
+
+}
+#search-content{
+   
+    /* width: 621px + 2px + 2px */
+    height: 36px;
+    border: 2px solid #ff0036;
+    
+}
+#search-content input{ 
+    float: left;
+    width: 481px;
+    height: 26px;
+    padding: 5px;
+    /* 去掉输入框的默认样式 */
+    outline: none;
+    border: none;
+}
+#search-content button{
+    float: right;
+    width: 130px;
+    height: 36px;
+    line-height: 36px;
+    text-align: center;
+    border: none;
+    font-size: 18px;
+    color: #fff;
+    background: #ff0036;
+}
+#search-type{
+    margin-top: 5px;
+}
+#search-type a{
+    padding: 0 12px;
+    font-size: 14px;
+    border-right: 1px solid #ccc;
+    color: #999;
+}
+#search-type a:last-child{
+    border: none;
+}
+#search-type a:first-child{
+    padding-left: 0;
+}
+#search-type .search-type-red{
+    color: #ff0036;
+}
+
+/* banner */
+#banner{
+    width: 100%;
+}
+#banner-wrapper{
+    width: 1230px;
+    height: 36px;
+    margin: 0 auto;
+}
+#banner-wrapper a{
+    float: left;
+    padding: 0 8px;
+    height: 36px;
+    line-height: 36px;
+    color: #333;
+}
+#banner-wrapper a:first-child{
+    margin-left: 200px;
+}
+#banner-wrapper img{
+    width: 100px;
+    height: 30px;
+    margin-top: 3px;
+}
+#banner-wrapper a:hover{
+    color: #ff0036;
+}
+
+/* container */
+#container{
+    width: 100%;
+    height: 500px;
+    background: url('../../素材/照片/9.jpg') 0 0 no-repeat;
+    z-index: 1;
+}
+#wrapper{
+    width: 1230px;
+    margin: 0 auto;
+}
+/* slider */
+#slider{
+position: relative;
+}
+/* menu */
+#menu{
+    width: 200px;
+    position: absolute;
+    top: -36px;
+    left: 0;
+    z-index: 100;
+  }
+#menu-title{
+    width: 200px;
+    height: 36px;
+    line-height: 36px;
+    color: #fff;
+    background: #ff0036;
+    position: relative; 
+  }
+#menu-title-img{
+    float: left;
+    font-size: 16px;
+    text-indent: 15px;
+    position: relative;
+    top: -1px;
+  }
+#menu-title-font{
+    float: left;
+    margin-left: 8px;
+    font-weight: bolder;
+  }
+#menu-content{
+    background: rgba(0, 0, 0, 0.55);
+    position: relative;
+  }
+.menu-content-list{
+    height: 31.2px;
+    line-height: 31.2px;
+    color: #fff;
+}
+.menu-content-list>i{
+    color: #fff;
+    opacity: 0.5;
+}
+.menu-content-list a{
+    font-size: 14px;
+    color: #fff;
+}
+.menu-content-img{
+    float: left;
+    font-size: 16px;
+    text-indent: 7px;
+    margin: 0 8px;
+}
+.menu-content-list:hover{
+    background: #fff;
+}
+.menu-content-pink:hover,
+.menu-content-pink:hover>a,
+.menu-content-pink:hover>i{
+    color: #e54077;
+    font-weight: bold;
+}
+.menu-content-blue:hover,
+.menu-content-blue:hover>a,
+.menu-content-blue:hover>i{
+    color: #427def;
+    font-weight: bold;
+}
+.menu-content-purple:hover,
+.menu-content-purple:hover>a,
+.menu-content-purple:hover>i{
+    color: #6347ed;
+    font-weight: bold;
+}
+.menu-content-oranger:hover,
+.menu-content-oranger:hover>a,
+.menu-content-oranger:hover>i{
+    color: #fa5c5c;
+    font-weight: bold;
+}
+.menu-content-yellow:hover,
+.menu-content-yellow:hover>a,
+.menu-content-yellow:hover>i{
+    color: #f7a831;
+    font-weight: bold;
+}
+.menu-content-red:hover,
+.menu-content-red:hover>a,
+.menu-content-red:hover>i{
+    color: #dd2727;
+    font-weight: bold;
+}
+.menu-content-green:hover,
+.menu-content-green:hover>a,
+.menu-content-green:hover>i{
+    color: #3bc7b0;
+    font-weight: bold;
+}
+.menu-content-hover:hover .menu-content-inner{
+    display: block; 
+}
+.menu-content-inner{
+    display: none;
+    width: 852px;
+    height: 500px;
+    background: #fff;
+    position: absolute;
+    top: 0px;
+    left: 200px;
+    overflow: hidden;
+    z-index: 10;
+}
+.menu-content-inner-left{
+    float: left;
+    width: 583px;
+    height: 462px;
+    margin: 19px 30px;
+    position: relative;
+}
+.menu-left{
+    display: inline-block;
+    margin-bottom: -10px;
+    width: 583px;
+}
+.menu-left-title{
+    float: left;
+    width: 60px;
+    height: 44px;
+    line-height: 20px;
+    color: #333;
+    font-size: 14px;
+    font-weight: 550;
+    text-align: center;
+}
+.menu-left-title-jiantou{
+    float: left;
+    width: 15px;
+    height: 22px;
+    position: relative;
+}
+.menu-left-jiantou{
+    float: left;
+    width: 6px;
+    height: 6px;
+    position: relative;
+    top: 6px;
+    margin: 0 auto;
+    border-top: 1px solid #333;
+    border-right: 1px solid #333;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+.menu-left-content{
+    display: block;
+    width: 493px;
+    position: relative;
+    top: 0px;
+    right: 0px;
+}
+.menu-left-content>a{
+    color: #666;
+    font-weight: normal;
+    line-height: 20px;
+}
+.menu-left-biaoqian{
+    float: left;
+    height: 22px;
+    margin-left: 13px;
+    line-height: 22px;
+}
+.menu-left-dashed{
+    overflow: hidden;
+    /* display: inline-block; */
+    float: right;
+    width: 493px;
+    height: 10.5px;
+    position: relative;
+    right: 0px;
+    margin-bottom: 10.5px;
+    border-bottom: 1px dashed rgba(0, 0, 0, 0.1);
+}
+.menu-left-right{
+    float: right;
+    width: 493px;
+    position: relative;
+}
+.menu-left-pink-hover a:hover{
+    color: #e54077;
+}
+.menu-content-inner .menu-left-pink{
+    color: #e54077;
+}
+.menu-left-blue-hover a:hover{
+    color: #427def;
+}
+.menu-content-inner .menu-left-blue{
+    color: #427def;
+}
+.menu-left-purple-hover a:hover{
+    color: #6347ed;
+}
+.menu-content-inner .menu-left-purple{
+    color: #6347ed;
+}
+.menu-left-yellow-hover a:hover{
+    color: #f7a831;
+}
+.menu-content-inner .menu-left-yellow{
+    color: #f7a831;
+}
+.menu-left-oranger-hover a:hover{
+    color: #fa5c5c;
+}
+.menu-content-inner .menu-left-oranger{
+    color: #fa5c5c;
+}
+.menu-left-red-hover a:hover{
+    color: #dd2727;
+}
+.menu-content-inner .menu-left-red{
+    color: #dd2727;
+}
+.menu-left-green-hover a:hover{
+    color: #3bc7b0;
+}
+.menu-content-inner .menu-left-green{
+    color: #3bc7b0;
+}
+.menu-content-inner-right{
+    float: left;
+    height: 480px;
+    width: 189px;
+    padding: 10px;
+    background: #fafafa;
+}

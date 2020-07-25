@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var str = 'hello world!';
+        // length 字符串的长度
+        console.log(str.length);
+        // indexOf 字符串中第一次出现当前字符的位置
+        console.log(str.indexOf('l'));
+        // lastIndexOf 字符串中最后一次出现当前字符的位置
+        console.log(str.lastIndexOf('l'));
+
+        var str1 = new String();
+        console.log(str1);
+        console.log(typeof str1);
+
+        var str2 = new String('hello world!');
+        console.log(str2);
+        console.log(str2.length);
+        console.log(str2.indexOf('l'));
+        console.log(str2.lastIndexOf('l'));
+
+        // replace 替换字符串中的某一部分，原字符串不变，返回替换后的字符串
+        var str3 = str.replace('world','xiaoming')
+        console.log(str3);
+        console.log(str);
+
+        // substr 返回从指定位置开始的指定长度的子字符串 第一个数是开始位置，第二个数是子字符串长度
+        console.log(str.substr(0,7));
+
+        // substring 返回从第一个数位置开始到第二个位置为止中间的字符串（不包括第二个未知的字符）
+        console.log(str.substring(7,9));
+
+        // toUpperCase 将小写字母改成大写  toLocaleLowerCase 将大写字母改成小写
+        console.log(str.toUpperCase());
+
+        // split 将字符串转化为数组 括号里是数组元素间的分割符号(就是按什么分割为数组的一个个元素)
+        console.log(str.split(' '));
+
+       
+
+    </script>
+</body>
+</html>

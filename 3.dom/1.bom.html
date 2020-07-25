@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            height: 10000px;
+        }
+    </style>
+</head>
+<body>
+    
+    <button id="obtn"> 1111</button>
+    <script>
+        window.document.write('<h1>132</h1>');
+        var btn = document.getElementById('obtn')
+        btn.onclick = function(){
+        // scrollTo() 滚动条移动到某一位置
+        // scrollBy() 滚动条移动了多少距离
+            window.scrollBy(0,100);
+            window.scrollTo(0,1000);
+        }
+
+        // 对话框 alert（str）
+        alert(123);
+
+        // 确认框 confirm（str）
+        // 点击按钮后有两个返回值 true 和 false
+        var tag = confirm('确定关闭吗？');
+        console.log(tag);
+
+        // 输入框
+        // promot(str,defaultvalue) 返回的类型是一个string
+        prompt('请输入一个number',1);
+
+        //setTimeout()--暂停指定的毫秒数后执行指定的代码
+        // 间隔某毫秒后执行方法
+        setTimeout(function(){
+            console.log(1);
+        },3000)
+        // clearTimeout()-取消指定的setTimeout函数将要执行的代码
+
+        // js 属于单线程
+        // 同步 异步
+        // setTimeout 是异步
+        // 主线程 任务队列
+
+
+        // setInteral()--间隔指定的毫秒数不停地执行指定的代码
+        // 每隔某毫秒执行方法
+        var i = 0;
+        var timer = setInterval(function(){
+            console.log(i++);
+            if (i == 6) {
+                clearInterval(timer)
+            }
+        }, 1000);
+        // clearInterval()-取消指定的setInterval函数将要执行的代码
+        
+        // 网址，比如http://www.w3school.com.cn/html/index.asp,遵守以下的语法规则:
+        // scheme://host. domain:port/path/fhlename
+
+
+        // ●scheme -定义因特网服务的类型。最常见的类型是http
+        // ●host-定义域主机(http的默认主机是www)
+        // ●domain -定义因特网域名，比如w3school.com.cn
+        // ●:port-定义主机上的端口号(http的默认端口号是80)
+        // ●path-定义服务器上的路径(如果省略，则文档必须位于网站的根目录中)。
+        // ●fhlename -定义文档/资源的名称
+
+        // Location对象的属性
+
+        // ●hash 设置或返回从井号(#)开始的URL (锚)
+        // ●host设置或返回主机名和当前URL的端口号
+        // ●hostname设置或返回当前URL的主机名
+        // ●href设置或返回完整的URL
+        // ●pathname设置或返回当前URL的路径部分
+        // ●port设置或返回当前URL的端口号
+        // ●protocol 设置或返回当前URL的协议
+        // ●search设置或返回从问号(?)开始的URL (查询部分)
+
+        // Navigator对象的属性
+        // ●userAgent 返回由客户机发送服务器的user-agent头部的值
+        // 获取用户所用的浏览器信息，以方便更好、更适合的为用户提供适合的页面
+
+        var ua = navigator.userAgent;
+
+        if (ua. index0f('iPhone') == -1 ) {
+            console. log(1)
+            setTimeout ( function(){
+                console. log(111)
+                location.href = 'https:/ /www. taobao. com' ;
+            }, 7000 )
+            } else {
+                console. log(2);
+                setTimeout(function(){
+                    console.log (2222 )
+                    location.href = ' https://h5.m. taobao。com/ ?sprefer=sypc00' ;
+                },7000)
+            }
+
+
+
+    </script>
+</body>
+</html>

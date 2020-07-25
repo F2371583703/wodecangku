@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        /* 优先级
+            id>class>标签
+        
+         */
+         /* 
+            选择器的权重
+            ！important  最高
+            内联样式 1000
+            id 100
+            class 10
+            伪类 10
+            标签 1
+            伪元素 1
+          */
+          /* 
+            同一个元素相同的样式 权重相同的话 后面的样式会覆盖前面的
+            同一个元素相同的样式 权重不同的话 按照权重大小展示
+            同一元素不同样式会合并
+           */
+        div{
+            width: 200px;
+            height: 200px;
+            background: red;
+        }
+        #content{
+            background: green;
+
+        }
+        .wrapper{
+            background: blue;
+        }
+        .list{
+            color: brown;
+            font-size: 30px;
+        }
+        #container>.list{
+            color: darkblue;
+        }
+    </style>
+</head>
+<body>
+    <!-- 同一个元素 可以设置多个class 中间用空格分区 -->
+    <div id="content" class="wrapper main"></div>
+    <ul id="container">
+        <li class="list">123456789</li>
+    </ul>
+</body>
+</html>

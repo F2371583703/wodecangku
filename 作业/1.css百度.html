@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>百度一下，你就知道</title>
+    <link rel="stylesheet" href="./iconfont.css">
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        /* 默认样式 */
+        a:link{
+            color: black;
+        }
+        /* 已访问过的 */
+        a:visited{
+            color: black;
+        /* 鼠标划入 */}
+        a:hover{
+            color:blue;
+        }
+        body{
+            font-size: 13px;
+        }
+        a{
+            text-decoration: none;
+        }
+
+        #div1{
+            
+            height: 60px;
+            /* float: left; */
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: 100;
+            height: 60px;
+            padding-left: 24px;
+        }
+        #div2{
+            position: absolute;
+            right: 0;
+            top: 0;
+            z-index: 100;
+            height: 60px;
+            padding-right: 24px;
+            /* float: right; */
+        }
+        .zitishezhi-1{
+            margin-right: 28px;
+            margin-top: 19px;
+            display: inline-block;
+            position: relative;
+           
+        }
+        .zitishezhi-2{
+            margin-left: 35px;
+            margin-top: 7px;
+            display: inline-block;
+            position: relative;
+            top: 0px;
+        }
+        #gaokao:link{
+            color: red;
+        }
+        #gaokao:visited{
+            color: red;
+        }
+        #gaokao:hover{
+            color:blue;
+        }
+        #img1{
+            width: 23px;
+            height: 23px;
+            display: inline-block;
+            background-size: 100% 100%;
+            margin-right: 4px;
+            position: relative;
+            top: 6px;
+
+        }
+        #img2{
+            padding: 2px;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            border: 1px solid blue;
+            position: relative;
+            right: 8px;
+            top: 4px;
+        }
+        #zhanghao{
+            position: relative;
+            right: 0px;
+            top:4px;
+            
+        }
+        #span1{
+            height: 16px;
+            color: #fff;
+            background: #4e71f2;
+            border-radius: 3px;
+            font-size: 11px;
+            display: inline-block;
+            line-height: 17px;
+            text-align: center;
+            padding: 0 2px;
+        }
+        #p1{
+            /* line-height: 60px; */
+            float: right;
+            position: relative;
+            right: 0px;
+            top:9px;
+        }
+        #a1{
+            height: 17.5px;
+        }
+
+        #div3{
+            width: 1000px;
+            height: 40%;
+            min-height: 314px;
+            max-height: 510px;
+            margin: 0 auto;
+            position: relative;
+        }
+        #div3-1{
+            display: block;
+            margin: 0 auto;
+            height: 100%    ;
+        }
+        #div3-12{
+            height: 60%;
+            min-height: 185px;
+            max-height: 310px;
+            position: relative;
+            z-index: 0;
+            text-align: center;
+        }
+        #img3{
+            width: 270px;
+            position: absolute;
+            /* bottom: 10px; */
+            left: 50%;
+            bottom: 0px;
+            margin-left: -135px;
+           
+        }
+        #a2{
+            display: block;
+            margin: 0 auto;
+            width: 300px;
+        }
+        #baiduyixia{
+            text-align: center;
+        }
+        #shurukuang{
+            width: 512px;
+            height: 16px;
+            padding: 12px 16px;
+            padding-right: 16px;
+            font-size: 16px;
+            margin: 0;
+            vertical-align: top;
+            outline: 0;
+            box-shadow: none;
+            border-radius: 10px 0 0 10px;
+            border: 2px solid #c4c7ce;
+            background: #fff;
+            color: #222;
+            overflow: hidden;
+            position: relative;
+        }
+        #anjian{
+            cursor: pointer;
+            width: 108px;
+            height: 44px;
+            line-height: 45px;
+            line-height: 44px\9;
+            padding: 0;
+            background: 0 0;
+            background-color: rgba(0, 0, 0, 0);
+            background-color: #4e6ef2;
+            border-radius: 0 10px 10px 0;
+            font-size: 17px;
+            color: #fff;
+            box-shadow: none;
+            font-weight: 400;
+            border: none;
+            outline: 0;
+        }
+    </style>
+</head>
+<body>
+    <div id="div1">
+       
+        <a href="http://news.baidu.com/" target="-blank" class="zitishezhi-1"> <i class="iconfont icon-gouwucheman"></i>新闻</a>
+        <a href="https://www.hao123.com/" target="-blank" class="zitishezhi-1">hao123</a>
+        <a href="https://map.baidu.com/@12701610.16,3760486.61,12z" target="-blank" class="zitishezhi-1">地图</a>
+        <a href="https://haokan.baidu.com/?sfrom=baidu-top" target="-blank" class="zitishezhi-1">视频</a>
+        <a href="https://tieba.baidu.com/index.html?traceid=" target="-blank" class="zitishezhi-1">贴吧</a>
+        <a href="https://xueshu.baidu.com/" target="-blank" class="zitishezhi-1">学术</a>
+        <a href="https://www.baidu.com/more/" target="-blank" >更多</a>
+    </div>
+    <div id="div2">
+    <a href="https://www.baidu.com/s?wd=%E9%AB%98%E8%80%83&sa=searchpromo_gk_pc_ysj" target="-blank" class="zitishezhi-2" id="gaokao" >高考加油</a>
+        <a href="https://www.baidu.com/s?tn=baidutop10&rsv_idx=2&wd=%E4%BF%A1%E9%98%B3%E5%A4%A9%E6%B0%94%E9%A2%84%E6%8A%A5" target="-blank" class="zitishezhi-2" id="a1">
+            信阳
+            <img src="https://dss0.bdstatic.com/5aV1bjqh_Q23odCf/static/superman/img/weather/icons/a1.png" alt="图片" id="img1">
+            <span>32℃</span>
+            <span id="span1">优</span>
+        </a>
+        <span  class="zitishezhi-2">设置</span>
+        <a href="http://i.baidu.com/" target="-blank" id="zhanghao" class="zitishezhi-2">
+            <img src="https://himg.bdimg.com/sys/portraitn/item/ff594270" alt="头像" id="img2">
+            <p id="p1">185******21</p> 
+        </a>
+    </div>
+    <div id="div3">
+        <div id="div3-1">
+            <div id="div3-12">
+                <a href="https://www.baidu.com/s?wd=%E4%BB%8A%E6%97%A5%E6%96%B0%E9%B2%9C%E4%BA%8B&tn=SE_Pclogo_6ysd4c7a&sa=ire_dl_gh_logo&rsv_dl=igh_logo_pc" id="a2">
+                    <img src="https://www.baidu.com/img/PCtm_d9c8750bed0b3c7d089fa7d55720d6cf.png" alt="图片" id="img3">
+                
+                </a>
+            </div>
+            <div id="baiduyixia">
+                <input type="text" id="shurukuang">
+                <img src="https://ss1.bdstatic.com/5eN1bjq8AAUYm2zgoY3K/r/www/cache/static/protocol/https/soutu/img/camera_new_5606e8f.png" alt="相机">
+                <button id="anjian">百度一下</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html> 

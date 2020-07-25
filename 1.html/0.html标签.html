@@ -1,0 +1,185 @@
+<!-- 声明文档类型通知浏览器根据哪个版本渲染页面  html5版本-->
+<!DOCTYPE html>
+<!--根元素-->
+<html lang="en">
+<!-- 头部文件
+     当前页面的基本配置
+-->
+<head>
+    <!-- 字符编码  gbk gb2312 utf-8  -->
+    <meta charset="UTF-8">
+    <!-- 移动端开发 响应式 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- ie浏览器兼容 ie8以上支持 用最高的版本渲染当前页面 -->
+    <meta http-equiv="X-UA-Compatible" content=" ie=edge">
+    <!-- 关键字  搜索引擎使用-->
+    <meta name="keywords" content="网上购物，淘宝，海外购物">
+    <!-- 网站描述 搜索引擎使用的 -->
+    <meta name="description" content="网上购物">
+    <!-- 标题 当前网页的标题 -->
+    <title>网页标题</title>
+</head>
+<body>
+    李雯
+    <!-- h1标题 -->
+    <h1>标题1</h1>
+    <h2>标题2</h2>
+    <h3>标题3</h3>
+    <h4>标题4</h4>
+    <h5>标题5</h5>
+    <h6>标题6</h6>
+    <!-- p 段落 -->
+    <p>段落</p>
+    <!-- i 斜体 -->
+    <p>李雯 我站在窗那看他行动轨迹，好怂，<i>想着电视里那种突然一个脑袋出现在你面前</i>，出现邪恶的笑</p>
+    <!-- br 强制换行
+        strong 加粗
+       -->
+    <p><strong >李雯</strong> 我站在窗那看他行动轨迹，好怂，想着电视里那种突然一个脑袋出现在你面前，出现邪恶的笑<br>我站在窗那看他行动轨迹，好怂，想着电视里那种突然一个脑袋出现在你面前，出现邪恶的笑<br>我站在窗那看他行动轨迹，好怂，想着电视里那种突然一个脑袋出现在你面前，出现邪恶的笑<br/>我站在窗那看他行动轨迹，好怂，想着电视里那种突然一个脑袋出现在你面前，出现邪恶的笑<br/>我站在窗那看他行动轨迹，好怂，想着电视里那种突然一个脑袋出现在你面前，出现邪恶的笑</p>
+    <!-- 
+        src 图片地址
+        图片地址： 绝对路径、相对路径
+        相对路径：./表示同一文件夹下的图片
+                 ../表示上一文件夹下的  可重复使用
+        alt 图片说明 图片加载不出来展示
+        png  .png 透明图
+        jpeg .jpg .jpeg
+        gif .gif 动图
+
+     -->
+    <img src="../../素材/照片/9.jpg" alt="图片">
+    <!-- 超链接
+        href  跳转链接
+        target="_blank" 打开新页面
+     -->
+    <a href="https:www.baidu.com" target="_blank">百度</a>
+    <!-- 无序列表 -->
+     <ul>
+         <li>列表1</li>
+         <li>列表2</li>
+     </ul>
+    <!-- 有序列表 -->
+     <ol>
+         <li>列表3</li>
+         <li>列表4</li>
+     </ol>
+
+     <!-- dic+css
+        块标签
+    -->
+     <div>李雯</div>
+     <div>李雯</div>
+     <span>李雯1</span>
+     <span>李雯2</span>
+    <!-- 
+            块级元素：
+                   自己占一行
+                   嵌套块级元素，行级元素
+
+            行级元素/行内元素：
+                     多个占一行
+                     只能嵌套行级元素
+
+            ⾏级元素：多个元素占⼀样 不能设置宽⾼ ⾏级元素不可以嵌套块级元素
+            <a> <span> <i> <strong> <em>
+            块级元素：⼀个元素占⼀⾏ 垂直排列 可以设置宽⾼ 块级元素可以嵌套⾏级元素或者块级元素
+            <div> <p> <ul> <li> <ol> <h1~h6> <table> 
+     -->
+     <!-- 表单 
+        action 表单提交动作
+    -->
+     <form action="">
+        <!-- 输入框 
+        value 表示默认值
+        -->
+        文本<input name="nanme" type="text" value="李雯">
+        <br>
+        <!-- type:password 密码框 -->
+        密码<input name="pwd" type="password">
+        <br>
+        <!-- 单选框
+            name 值相同的话就是一组
+            name 填写项的名称
+        -->
+        性别
+        <br>
+        男<input name="sex" type="radio">
+        <br>
+        女<input name="sex" type="radio">
+        <br>
+        <!-- 
+            for 与 input的id相等
+         -->
+         <label for="input1">男</label><input name="sex" type="radio" id="input1">
+         <br>
+         <label for="input2">女</label><input name="sex" type="radio" id="input2">
+         <br>
+         <!-- 复选框
+            checked 默认选中
+        -->
+         就业<input type="checkbox" checked>
+         考研<input type="checkbox">
+         种地<input type="checkbox">
+         <br>
+         <!-- 下拉列表
+            option 下拉列表的每一项
+        -->
+         <select>
+            <option value="1">黑龙江</option>
+            <option value="2">贵州</option>
+            <option value="3">河南</option>
+         </seelect>
+         <br>
+         <!-- 提交按钮 -->
+         <input type="submit">
+         <!-- 
+             按钮
+            可插入图片
+            -->
+         <button>按钮
+            <img src="" alt="">
+         </button>
+         <br>
+         <!-- 文本域
+            cols 列  多少字符宽度
+            rows 行  多少行
+        -->
+        <textarea name="" id="" cols="10" rows="10"></textarea>
+
+
+     </form>
+
+     <!-- table 表格
+        border  边框
+    -->
+    <table border="1">
+        <!-- 
+            tr  行
+            td  列
+         -->
+        <tr>
+            <td>1</td>
+            <td>2</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>4</td>
+        </tr>
+    </table>
+<!-- 
+            块级元素：
+                   自己占一行
+                   嵌套块级元素，行级元素
+                    h1~h6 p ul li ol div
+          
+            行级元素/行内元素：
+                    多个占一行
+                    只能嵌套行级元素
+                    a span label
+     -->
+
+
+
+
+</body>
+</html>

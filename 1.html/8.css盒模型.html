@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        /* 
+            * 通配符选择器
+        */
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+
+        /* CSS 3
+                box-sizing: 控制元素是 标准盒模型 还是怪异盒模型
+                标准盒模型 元素实际的宽度 = width + padding + border
+                怪异盒模型 width (元素实际的宽度) = padding + border +元素宽
+                box-sizing: 以特定的方式定义匹配某个区域的特定元素
+                content-box (标准盒模型)、border-box (怪异盒模型)
+                border-box: 为元素指定的任何内边距和边框都将在已设定的宽度和高度内进行绘制
+            */
+        div{
+            width: 300px;
+            height: 300px;
+            background: red;
+            /*             
+            内边距
+            padding :上 右 下 左
+            数值不够，上下相等，左右相等 
+            一个值，全相等
+            */ 
+            padding-top: 20px;
+            padding-left: 30px;
+            padding-right: 40px;
+            padding-bottom: 50px;
+            /* padding: 20px 40px 50px 30px; */
+
+            /* 边框类型
+                solid 实线
+                dashed 虚线
+                可以分开写
+            */
+            border: 5px solid blue;
+            /* 外边距 */
+            margin: 50px ;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+</body>
+</html>

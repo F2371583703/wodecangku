@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn"></button>
+    <script>
+        var oBtn = document.getElementById('btn');
+        oBtn.onclick = function(){
+            // 页面后退一个
+            history.back();
+            // 页面前进一个
+            history.forward();
+            // 页面后退两步 前进就用正数，后退就用负数
+            history.go(-2);
+        }
+    </script>
+</body>
+</html>

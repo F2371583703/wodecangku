@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        #wrapper{
+            width: 200px;
+            height: 200px;
+            margin: 0 auto;
+            background: red;
+        }
+        img{
+            /* 图片居中的三种方法 */
+
+            /* 
+            1.行级元素居中
+            display: block;
+            margin: 0 auto; */
+            width: 200px;
+/* 
+            子元素
+            2.行内的块级元素 */
+            position: absolute;
+            left: 50%;
+            margin-left: -100px;
+        }
+        /* #container{
+            /* 父元素 */
+            /*3.行内的块级元素 */
+            /* background: aqua;
+            text-align: center;  */
+        /* }  */
+    </style>
+</head>
+<body>
+    <div id="wrapper">
+
+    </div>
+    <div id="container">
+        <img src="../../素材/照片/5.jpg" alt="图片">
+    </div>
+</body>
+</html>

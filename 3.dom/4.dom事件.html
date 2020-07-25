@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #wrapper{
+            width: 100px;
+            height: 100px;
+            border: 1px solid red;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrapper">点我！</div>
+    <input type="text" id="username">
+
+    <form action="" onreset="alert('reset')">
+        <input type="reset">
+    </form>
+
+    <script>
+        var oDiv = document.getElementById('wrapper');
+
+        // onclick 单击事件
+        oDiv.onclick = function(){
+            // 函数体 处理的方法
+            console.log('hello world!');
+        }
+
+        // ondblclick 双击事件
+        oDiv.ondblclick = function(){
+            console.log('双击666');
+        }
+
+        // onmouseout 鼠标滑出
+        oDiv.onmouseout = function(){
+            oDiv.style.backgroundColor = '#fff'
+        }
+        // onmouseover 鼠标滑入
+        oDiv.onmouseover = function(){
+            oDiv.style.backgroundColor = 'pink'
+        }
+        // onmousedown 按下鼠标按键
+        oDiv.onmousedown = function(){
+            console.log('按下');
+        }
+        // onmouseup 松开鼠标按键
+        oDiv.onmouseup = function(){
+            console.log('松开');
+        }
+        // onmousemove 鼠标移动
+        oDiv.onmousemove = function(){
+            console.log('移动');
+        }
+
+        // onfocus获得焦点 onblur失去焦点
+        var oInput = document.getElementById('username');
+        oInput.onfocus = function(){
+            console.log('获得焦点');
+        }
+        oInput.onblur = function(){
+            console.log('失去焦点');
+        }
+
+        // onchange 内容改变 当内容改变时执行函数内容
+        oInput.onchange = function(){
+            console.log('onchange:',oInput.value);
+        }
+
+        // onkeydown 点下键盘任意按键 执行函数 一直不松手，一直执行
+        oInput.onkeydown = function(){
+            console.log('onkeydown');
+        }
+        // onkeypress 点下并松开键盘任意键 执行函数
+        oInput.onkeypress = function(){
+            console.log('onkeypress');
+        }
+        // onkeyup 松开键盘任意键 执行函数
+        oInput.onkeyup = function(){
+            console.log('onkeyup');
+        }
+
+        // onresize 窗口或框架被重新调整大小。
+    </script>
+</body>
+</html>

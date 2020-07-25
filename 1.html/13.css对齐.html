@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        /* 
+            块级元素左右居中
+            margin-left = margin-right = auto
+            margin: 0 auto;
+        
+         */
+         /* 
+            单行文本 垂直居中 行高等于容器的高度
+          */
+        div{
+            width: 200px;
+            /* height: 200px;
+            margin: 0 auto; */
+              /* 行高  */
+            /* line-height: 200px;
+            text-align: center; */
+            /* background: aqua; */
+        }
+        #inner{
+            width: 200px;
+            height: 50px;
+            border: 1px solid red;
+            /* 
+                溢出隐藏 overflow
+            
+             */
+            overflow: scroll;
+        } 
+        #text{
+            width: 200px;
+            height: 30px;
+            border: 1px solid black;
+            /* 单行文本溢出隐藏 */
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+        /* 
+            单行文本溢出展示..
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+         */
+
+    </style>
+</head>
+<body>
+    <div>1234567</div>
+    <div id="inner">12345678900-
+        12345678900-
+        12345678900-
+        12345678900-1
+        2345678900-1
+        2345678900-123
+        45678900-123
+        45678900-12345
+        678900-12345678
+        900-12345678900-
+        12345678900-1234
+        5678900-12345678
+        900-12345678900-1
+        2345678900-123456
+        78900-12345678900
+        -12345678900-</div>
+        <div id="text">我站在窗那看他行动轨迹，好怂，想着电视里那种突然一个脑袋出现在你面前，出现邪恶的笑我站在窗那看他行动轨迹，好怂，想着电视里那种突然一个脑袋出现在你面前，出现邪恶的笑我站在窗那看他行动轨迹，好怂，想着电视里那种突然一个脑袋出现在你面前，出现邪恶的笑我站在窗那看他行动轨迹，好怂，想着电视里那种突然一个脑袋出现在你面前，出现邪恶的笑我站在窗那看他行动轨迹，好怂，想着电视里那种突然一个脑袋出现在你面前，出现邪恶的笑</p>
+        
+</body>-
+</html>

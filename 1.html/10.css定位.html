@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        body{
+            height: 2000px;
+        }
+        .div1{
+            width: 100px;
+            height: 100px;
+            border: 1px solid red;
+            position: relative;
+            top: 20px;
+            left: 30px;
+        }
+        .div2{
+            width: 100px;
+            height: 100px;
+            border: 1px solid blue;
+        }
+            /* position 定位
+                relative 相对定位 元素定位后 相对于元素本身进行定位 元素定位后 空间不会释放
+                absolute 绝对定位 元素定位后 相对与最近已定位的祖先元素 空间释放
+                fixed    固定定位 元素定位后 相对于浏览器窗口定位 空间释放
+             */
+       #div3{
+           width: 500px;
+           height: 500px;
+           border: 1px solid red;
+           margin: 100px;
+           position: relative;
+            top: 20px;
+            left: 30px;
+
+       }
+       #div4{
+           width: 300px;
+           height: 300px;
+           border: 1px solid blue;
+           position: relative;
+            top: 40px;
+            left: 60px;
+       }
+       #div5{
+           width: 100px;
+           height: 100px;
+           border: 1px solid green;
+           position: absolute;
+           top: 30px;
+           left: 40px;
+       }
+       #div6{
+           width: 100px;
+           height: 100px;
+           border: 1px solid brown;
+       }
+       #div7{
+           width: 900px;
+           height: 200px;
+           background: red;
+           position: fixed;
+           top: 10px;
+           left: 0px;
+       }
+       #div8{
+           width: 100px;
+           height: 100px;
+           background: blue;
+           position: absolute;
+           top: 0px;
+           left: 0px;
+           z-index: 1;
+       }
+    </style>
+</head>
+<!-- 定位层级
+    z-index可以改变层级
+ -->
+<body>
+    <!-- <div class="div1"></div>
+    <div class="div2"></div> -->
+    <!-- <div id="div3">
+        <div id="div4">
+            <div id="div5"></div>
+            <div id="div6"></div>
+        </div>
+    </div> -->
+    <div id="div7"></div>
+    <div id="div8"></div>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .inner{
+            width: 100px;
+            height: 100px;
+            border: 1px solid red;
+        }
+    </style>
+</head>
+<body>
+    <div id="content">1234567</div>
+    <ul id="warpper">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+    </ul>
+    <ul>
+        <li>11</li>
+        <li>22</li>
+        <li>33</li>
+        <li>44</li>
+        <li>55</li>
+    </ul>
+
+    <input type="text" name="username">
+
+    <script>
+        
+        // getElementByI 根据id获取元素 只能获取到第一个叫这个id的元素
+        var oDiv = document.getElementByI('content');
+        console.log(oDiv);
+
+        // background-color
+        // font-size fontSize
+        // 设置样式
+        oDiv.style.backgroundColor = '#ff0036';
+        // 给元素设置类名
+        oDiv.className = 'inner';
+
+        // getElementsByTagName 根据标签名获取元素 在document获得文件下的全部标签 返回多个
+        // getElementsByTagName 可以在document上调用 也可以在元素上调用
+        var aLi = document.getElementsByTagName('aLi');
+        console.log(aLi);
+        //  HTMLCollection 类数组 只能获取到length
+
+        var oWrapper = document.getELementById('wrapper');
+        var aLi1 = oWrapper.getELementsByTagName('li');
+        console.log(ali1);
+
+        // getElementsByName根据name参数获取元素 返回多个
+        // NodeList 类数组 length
+        var oInput = document.getElementsByName('username');
+        console.log(oInput);
+
+        for(var i = 0; i<oInput.length;i++){
+            console.log(oInput[i].value);
+        }
+
+        // 类数组只有length属性 没有数组下的任何方法=>Array
+    </script>
+</body>
+</html>

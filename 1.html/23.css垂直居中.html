@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 500px;
+            height: 500px; 
+            border: 2px solid red;
+            
+            line-height: 500px;
+        }
+        img{
+            /* 
+            写在子元素上 
+            baseline:把当前盒的基线与父级盒的基线对齐。如果该盒没有基线，就将底部外边距的边界和父级的基线对齐
+            sub:把当前盒的基线降低到合适的位置作为父级盒的下标(该值不影响该元素文本的字体大小)
+            super:把当前盒的基线提升到合适的位置作为父级盒的上标(该值不影响该元素文本的字体大小)
+            text-top:把当前盒的top和父级的内容区的top对齐
+            text-bottom:把当前盒的bottom和父级的内容区的bottom对齐
+            middle:把当前盒的垂直中心和父级盒的基线加上父级的半x-height对齐
+            top:把当前盒的top与行盒的top对齐
+            bottom:把当前盒的bottom与行盒的bottom对齐
+            <percentage>:把当前盒提升(正值) 或者降低(负值)这个距离，百分比相对line-height计算。 当值为0%时等同于baseline.
+            <length>:把当前盒提升(正值) 或者降低(负值)这个距离。当值为0时等同于baseline。 (CSS2)
+
+            */
+            vertical-align: middle;
+        }
+    </style>
+</head>
+<body>
+    <div>23456
+        <img src="../作业/图片/TB1ztBlaMMPMeJjy1XbXXcwxVXa-200-60.png" alt="">
+    </div>
+</body>
+</html>
