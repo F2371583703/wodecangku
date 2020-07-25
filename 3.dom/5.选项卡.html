@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        li{
+            list-style: none;
+        }
+        #container{
+            width: 300px;
+            margin: 50px auto 0;
+        }
+        .clearfix::after{
+            content: '';
+            display: block;
+            clear: both;
+        }
+        #menu>li{
+            float: left;
+            width: 100px;
+            height: 40px;
+            text-align: center;
+            line-height: 40px;
+            color: #333;
+        }
+        #menu>li.selected,
+        #content>div.active{
+            color: #fff;
+            background-color: #ff8900;
+        }
+        #content>div{
+            display: none;
+            width: 300px;
+            height: 300px;
+            color: #ff8907;
+        }
+        #content>div.active{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <ul id="menu" class="clearfix">
+            <li class="selected">菜单1</li>
+            <li>菜单2</li>
+            <li>菜单3</li>
+        </ul>
+        <div id="content">
+            <div class="active">内容1</div>
+            <div>内容2</div>
+            <div>内容3</div>
+        </div>
+    </div>
+    <script>
+        var oMenu = document.getElementById('menu');
+        var aLi = oMenu.getElementsByTagName('li');
+
+        var oCon = document.getElementById('content');
+        var aDiv = oCon.getElementsByTagName('div');
+
+        // for循环在一开始就执行了，并且给每项都连接好了
+        for(var i=0;i<aLi.length;i++){
+            // 绑定索引
+            aLi[i].index = i;
+            aLi[i].onclick = function(){
+                for (var j = 0; j < aLi.length; j++) {
+                    aLi[j].className = '';
+                    aDiv[j].className = '';
+                }
+                aLi[this.index].className = 'selected';
+                aDiv[this.index].className = 'active';
+            }
+        }
+
+
+
+
+
+    </script>
+</body>
+</html>
