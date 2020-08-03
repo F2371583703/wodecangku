@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        1111
+        <a href=""></a>
+        
+    </div>
+    <script>
+        // createElement 创建元素节点
+        var oDiv = document.getElementsByTagName('div')[0];
+        var oH1 = document.createElement('h1');
+        // 插入内容，可以是节点也可以是文本
+        oH1.innerHTML = '<a href="#">ada</a>'
+        console.log(oH1);
+        // 插入一个节点
+        oDiv.appendChild(oH1);
+        var oA = document.createElement('a');
+        // 删除一个节点
+        oDiv.removeChild(oA);
+
+        var oP = document.createElement('p');
+        // 在某一个节点前插入一个节点op是要插入内容
+        oDiv.insertBefore(oP,oH1)
+        // 替换节点 把oA替换成oP (OA原先就存在)
+        oDiv.replaceChild(oP,oA);
+
+        // <p>创建文本节点，传参数即是文本内容</ p>
+        var p = document. createElement("p");//创建一个元素节点，传入标签名
+        var txt = document. createTextNode("创建文本节点,传参数即是文本内容");
+        p. appendChild(txt);//将txt所引用的文本节点插入p到p的最后面(在这里p是空的) 
+        //直到现在， 页面不会出现任何内容，必须将创建的节点插入到文档中
+        document . body . appendChild(p);// p将出现在最后
+
+        // 节点属性 setAttribute getAttribute removeAttribute
+        // setAttribute 设置属性 添加的属性可以在html中看见
+        p.setAttribute('index',1);
+        // 对象.属性  方法设置的属性 在html中看不见
+        p.index = 1;
+
+        // getAttribute 获取属性
+        console.log(p.getAttribute('index'));
+
+        // removeAttribute 删除属性
+        p.removeAttribute('index');
+    </script>
+</body>
+</html>

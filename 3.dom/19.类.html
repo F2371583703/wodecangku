@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 对象种类
+        // 1.自定义对象
+        // 2.内置对象 Array Date Math Sting
+        // 3.dom
+
+
+        //  类 ：是具有相同的属性的方法的集合 /构造方法 构造函数
+        //  类名的首字母要大写
+        //  声明类的时候 属性写在构造函数中，方法写在原型（prototype）中
+        //  原型中的方法被实例化对象所共用
+        function Person(_name,_age,_weight ) {
+            this.name = _name,
+            this.age = _age,
+            this.weight = _weight
+            // this.code = function(){
+            //     console.log(this.name+'coding.....');
+            // }
+        }
+
+        // 原型
+        // 函数下有一个原型 prototype
+        // 通过原型添加的属性和方法可以被实例化对象所共享
+        
+        Person.prototype.height = '175';
+
+        Person.prototype.eat = function(){
+            console.log('eat......');
+        }
+
+
+
+        // 实例化一个对象
+        var p1 = new Person('fl',23,'56kg');
+        console.log('p1:', p1);
+        // p1.code();
+        // 实例化对象 如果传参的话，没有传的参数是undefined
+        var p2 = new Person('zz',18)
+        console.log('p2:',p2);
+
+        // console.log(Person);
+        // var person1 = {
+        //     name : 'zs',
+        //     age : '19',
+        //     code : function(){
+        //         console.log('coding.....');
+        //     }
+        //  }
+
+        var str = 'abc';
+        str = 'abcabcabcabc';
+        function strPush(_str){
+            for(var i=0;i<3;i++){
+                _str += _str;
+            }
+            return _str;
+        }
+
+        strPush(str);
+
+        String.prototype.strPush = function(_str){
+            for(var i=0;i<3;i++){
+                _str += _str;
+            }
+            return _str;
+        }
+
+        var str = '123';
+        var str = new String('123');
+
+        str.strPush('123');
+
+
+
+
+    </script>
+</body>
+</html>

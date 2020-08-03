@@ -24,9 +24,11 @@
         var oDiv = document.getElementById('wrapper');
 
         // onclick 单击事件
-        oDiv.onclick = function(){
+        oDiv.onclick = function(e){
             // 函数体 处理的方法
             console.log('hello world!');
+            // target 事件源 谁触发了事件
+            console.log(e.target);
         }
 
         // ondblclick 双击事件
@@ -83,6 +85,16 @@
         }
 
         // onresize 窗口或框架被重新调整大小。
+
+        // addEventListener 添加事件监听 可以给元素绑定多个相同事件
+        // 方法包含三个菜蔬 第一个参数：事件 第二个参数：方法 第三个参数是一个boolean
+        oDiv.addEventListener('click' ,function(){
+            console.log(1);
+        },false)
+        // false 事件冒泡  从里向外传播 触发了资源数事件后 就会冒泡到父元素的事件
+        // true 事件捕获  从外向里传播
+
+        // stopPropagation() 阻止事件冒泡
     </script>
 </body>
 </html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div>12345678</div>
+    <span>23456789</span>
+
+    <ul>
+        <li>111</li>
+        <li>222</li>
+        <li>333</li>
+        <li id="list">444</li>
+    </ul>
+    <!--节点
+        元素节点
+        属性节点
+        文本节点
+        注释节点 
+     -->
+    <script>
+        //  nodeName 节点名称 元素名称  文本的话 -> #text
+        var oDiv = document.getElementsByTagName('div')[0];
+        var oSpan = document.getElementsByTagName('span')[0];
+        var oUl = document.getElementsByTagName('ul')[0];
+
+        console.log(oDiv.nodeName);
+        console.log(oSpan.nodeName);
+
+        // firstChild 第一个子节点
+        var inner = oDiv.firstChild; //'12345678' 文本节点
+
+        // nodeValue 节点的值， 元素节点的值是null；  文本节点的值  是文本内容是一个字符串
+        console.log(oDiv.nodeValue);
+        console.log(inner.nodeValue);
+
+        // nodeType 节点类型
+        console.log(oDiv.nodeType);
+        console.log(inner.nodeType);
+
+        // 还定义了对应不同节点类型的12个常量. 
+        // ●Node.ELEMENT_NODE (1)
+        // ●Node.ATTRIBUTE_NODE (2)
+        // ●Node.TEXT_NODE (3)
+        // ●Node.CDATA_SECTION_NODE (4)
+        // ●Node.ENTITY_REFERENCE_NODE (5)
+        // ●Node.ENTITY_NODE (6)
+        // ●Node.PROCESSING_INSTRUCTION_NODE (7)
+        // ●Node.COMMENT_NODE (8)
+        // ●Node.DOCUMENT_NODE (9)
+        // ●Node.DOCUMENT_TYPE_NODE (10)
+        // ●Node.DOCUMENT_FRAGMENT_NODE (11)
+        // ●Node.NOTATION_NODE (12)
+
+        // firstChild  lastChild 回车换行也是一个节点
+        console.log(oUl.firstChild);
+        console.log(oUl.lastChild);
+
+        // nextSibling 找下一个节点 标准浏览器里 会找到 （回车 空格）
+        // nextElementSibling 标准浏览器里找到元素节点 ie里不支持
+        // 拿到元素的下一个节点，并判断节点类型是否是元素节点 如果不是的话继续查找下一个节点
+        function next(elem){
+            do{
+                elem = elem.nextSibling;
+            }while(elem && elem.nodeType != 1)
+            return elem;
+        }
+        console.log(111,next(oDiv));
+        // previousSibling 前一个节点
+        // previousElementSibling
+        // 查找上一个元素节点
+        function pre(elem){
+            do{
+                elem = elem.previousSibling;
+            }while(elem && elem.nodeType !=1)
+            return elem;
+        }
+
+       
+
+        console.log(oDiv.nextElementSibling);
+
+        //通过ua去判断浏览器环境 调用不同的属性
+        function next1() {
+            var ua = navigator.userAgent;
+            // Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1) ie6d的ua
+            ie6的ua
+            if (ua. indexOf('MSIE') > -1){ // ie
+                elem = elem.nextSibling;
+            } else {
+                elem = elem. nextElementSibling; 
+            }
+        }
+
+        var oList = document.getElementById('list');
+        console.log(oList.nextElementSibling);
+
+        // 查找第一个子元素节点
+        function frist(elem){
+            elem = elem.firstChild;
+            if(elem.nodeType != 1){
+                elem = elem.nextSibling;
+                next(elem);
+            }
+            return elem;
+        }
+
+        console.log(222,frist(oUl));
+
+
+        // children 查找所以得子节点 返回的是类数组
+        console.log(oUl.children);
+
+
+
+
+    </script>
+</body>
+</html>

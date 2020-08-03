@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        div{
+            width: 200px;
+            height: 200px;
+            padding: 20px;
+            border: 5px;
+            margin: 10px;
+            background: #ff0036;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+
+    <script>
+        var oDiv = document.getElementsByTagName('div')[0];
+        // style.width 获取匀速的内联样式 返回值包含px
+        console.log(oDiv.style.width);
+        console.log(oDiv.style.height);
+        // offsetWidth = width + padding + border 返回值就是一个number
+        console.log(oDiv.offsetWidth);
+        // offsetHeight = height + padding + border 返回值就是一个number
+        console.log(oDiv.offsetHeight);
+        // clientWidth = width + padding 返回值就是一个number
+        console.log(oDiv.clientWidth);
+        // clientHeight = height + padding 返回值就是一个number
+        console.log(oDiv.clientHeight);
+        // offsetLeft 相对于最近的已定位的祖先元素的上边的距离
+        console.log('top:',oDiv.offsetTop);
+        // offsetLeft 相对于最近的已定位的祖先元素的左边的距离
+        console.log('left:',oDiv.offsetLeft);
+
+    </script>
+</body>
+</html>
