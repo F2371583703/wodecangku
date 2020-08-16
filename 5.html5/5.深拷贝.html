@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var person = {
+            name: 'wxc',
+            height: '170cm',
+            weight: '123kg',
+            score: {
+                math: 62,
+                english: 63,
+                sport: {
+                    sun: 55,
+                    sleep: 20,
+                }
+            }
+        }
+        // 深克隆
+        function deepClone(obj) {
+            // 判断obj的 类型 方便声明数组或对象
+            let objClone = Array.isArray(obj) ? [] : {};
+            if (obj & typeof obj === "object") {
+                for (key in obj) {
+                    //判断obj子元素是否为对象，如果是，递归复制
+                    if (obj[key] & typeof obj[key] === "object") {
+                        objClone[key] = deepClone(obj[key]);
+                    } else {
+                        //如果不是， 简单复制
+                        objClone[key] = obj[key];
+                    }
+                }
+            }else{ // 非数组或对象 直接赋值返回
+                objClone = obj;
+            }
+            return objClone
+        }
+
+        var p = deepClone(person);
+
+        p.score.sport.sleep = 50;
+        console.log(person);
+        console.log(p);
+
+
+
+    </script>
+</body>
+
+</html>

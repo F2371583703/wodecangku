@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // cookie设置是一个字符串
+        document.cookie = 'name=wxc'
+
+        var date = new Date();
+        date.setDate(date.getDate() + 1);
+        // console.log(date);
+        // toUTCString 日期对象转字符串
+        // console.log(date.toUTCString()); 
+        // expires 设置cookie过期时间
+        document.cookie = 'text=111;expires=' + date.toUTCString();
+
+        console.log(document.cookie);
+
+        // 设置cookie 传入三个参数
+        function setCookie(key,value,expires){
+            var date = new Date();
+            date.setDate(date.getDate() + expires*1);
+            document.cookie = key + '=' + value + ';expires=' + date.toUTCString();
+        }
+
+        setCookie('text2','222','2');
+
+        // 获取cookie
+        function getCookie(key){
+            var tmp = document.cookie;
+            tmp = tmp.split(';');
+            for(var i=0;i<tmp.length;i++){
+                var arr = tmp[i].split('=')
+                // trim() 去掉字符串前后的空格 不能删除中间的
+                if(arr[0].trim() == key){
+                    return arr[1];
+                }
+            }
+        }
+        // 删除cookie
+        function deleteCookie(key){
+            var date = new Date();
+            date.setDate(date.getDate() - 1);
+            document.cookie = key + '=null;expires=' + date.toUTCString();
+
+        }
+        deleteCookie('text2');
+
+        console.log(getCookie('text'));
+
+        // cookie 存储量为4k 可以设置过期时间，如果不设置的话浏览器窗口关闭之后就没了
+    </script>
+</body>
+</html>

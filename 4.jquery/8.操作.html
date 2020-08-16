@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="div1">1111</div>
+    
+    <script src="jQuery_压缩.js"></script>
+    <script>
+
+        // 两个方法的区别是链式操作时不一样
+        // 在父元素中插入一个h2
+        $('#div1').append('<h2>hahahahahahah</h2>');
+        // 将h2插入到父元素中
+        $('<h2>hahahahahahah</h2>').appendTo('#div1');
+
+        // html() 里面有值就是赋值 没有就是取值
+    </script>
+</body>
+</html>

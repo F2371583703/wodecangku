@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="div1">
+        fghj
+    </div>
+    <script src="jQuery.js"></script>
+    <script>
+        // 添加一个属性
+        $('#div1').attr('class','a')
+        // 取属性中的值 只能取到集合中的第一个值
+        console.log($('#div1').attr('id'));
+
+        // 移除一个属性
+        $('#div1').removeAttr('class')
+    </script>
+</body>
+</html>

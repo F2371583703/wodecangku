@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #div1{
+            width: 200px;
+            height: 200px;
+            background: #ff0036;
+            margin-left: 50px;
+            position: relative;
+        }
+        #div2{
+            width: 100px;
+            height: 100px;
+            background: #00ffff;
+            position: absolute;
+            left: 33px;
+            top: 44px;
+        }
+        body{
+            height: 3000px;
+        }
+    </style>
+</head>
+<body>
+    <div id="div1">
+        <div id="div2"></div>
+    </div>
+    <script src="jQuery_压缩.js"></script>
+    <script>
+        // offset 距离文档document的距离 返回的是一个object值 里面包括top和left
+        console.log($('#div1').offset());
+
+        console.log($('#div2').offset());
+        // position 距离最近已定位祖先元素的距离
+        console.log($('#div2').position());
+
+
+        $(window).on('scroll',function(){
+            console.log($(window).scrollTop());
+        })
+    </script>
+</body>
+</html>

@@ -7,6 +7,68 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <div>
+        <ul id="wrapper">
+            <li class="list">11</li>
+            <li class="li1 list">22</li>
+            <li class="list">33</li>
+            <li class="list">44</li>
+            <li class="list">55</li>
+        </ul>
+        <div id="content"></div>
+    </div>
+    <script src="jQuery.js"></script>
+    <script>
+        // jq对象 和dom对象可以相互转化
+        // dom -> jq $(oDiv)
+        // jq -> dom $div[0]
+        // jq的方法 只能用于jq对象
+        // dom的方法 只能用于dom对象
+        // var $Li = $('.list')
+        // console.log($Li);
+        $('.list').css('background','red');
+        
+        var oUl = document.getElementById('wrapper');
+        console.log($('#wrapper'));
+        // 上下两个效果一样
+        console.log($(oUl));
+
+        console.log(oUl);
+        // 上下两个效果一样
+        console.log($('#wrapper')[0]);
+
+        // 分组选择器
+        $('#wrapper,#content');
+
+        // 相邻选组器 选择后一个元素
+        $('.li1 + li');
+        // 兄弟选择器 选择后面的所有兄弟元素
+        $('.li1 ~ li');
+
+        //              aa
+        //              aa
+        //              aa
+        //              aa
+        //              aa
+        //              aa
+        //        aa    aa    aa
+        //         aa   aa   aa
+        //          aa  aa  aa
+        //           aa aa aa
+        //            aaaaaa
+        //             aaaa
+        //              aa
+        // :eq()匹配某一个索引值得元素 从零开始的 
+        $('li1:eq(2)')
+
+        // even选择了所有的偶数 从0开始 所以是第一个，第三个，第五个元素
+        $('li1:even')
+        // odd选择了所有的奇数 从0开始 所以是第二个，第四个，第六个元素
+        $('li1:odd')
+        // first第一个 last最后一个 gt()后面的 lt()前面的
+
+
+
+    </script>
 </body>
 </html>

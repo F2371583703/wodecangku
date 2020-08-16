@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        div{
+            width: 300px;
+            height: 300px;
+            font-size: 50px;
+            font-weight: bolder;
+            padding: 50px;
+            border: 20px dashed aqua;
+            background-color: red;
+            background-image: url('../../../素材/照片/15.jpg');
+            background-repeat: no-repeat;
+
+            /* 改变图片的大小 */
+            /* background-size: 250px ; */
+            background-size: 22%;
+
+            /* background-origin 指定背景图片显示的原点
+                padding-box 包含 padding content
+                border-box 包含 border padding content
+                content-box 包含 content
+             */
+            background-origin: content-box;
+
+            /* background-clip 显示背景的区域
+                text 可以在文本上显示
+             */
+            /* -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent; */
+
+            /* 固定背景图在屏幕上的相对位置 */
+            background-attachment: fixed;
+
+        }
+    </style>
+</head>
+<body>
+    <div>123456789</div>
+</body>
+</html>

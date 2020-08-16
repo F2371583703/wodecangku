@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!-- 异步加载 defer async -->
+    <!-- defer 先加载dom 同时加载js dom加载完成后执行js -->
+    <script src="../4.jquery/jQuery_压缩.js"></script>
+    <!-- async 先加载dom 同时加载js 加载完成后执行js 加载剩余的dom-->
+    <script src="../4.jquery/jQuery_压缩.js"></script>
+
+</head>
+<body>
+    <ul>
+        <li class="list">1</li>
+        <li class="list">2</li>
+        <li class="list">3</li>
+        <li class="list">4</li>
+        <li class="list">5</li>
+    </ul>
+
+    <p>1234567</p>
+
+    <!-- 1px*1px -->
+    <!-- 图片懒加载
+        src存放 一个1px*1px 的质量较小的图片
+        data-src 存放真正的照片
+        当元素进入到可视区域的时候 获取data-src里内容赋值给src
+     -->
+    <img src="" data-src="" alt="">
+
+    
+    <script>
+        // querySelector 查找满足条件的第一个元素 返回一个dom对象
+        var oLi = document.querySelector('.list');
+        console.log(oLi);
+
+        // querySelectorAll 查找满足条件的全部元素 返回的是一个类数组
+        var aLi = document.querySelectorAll('list');
+        console.log(aLi);
+
+        for(var i=0;i<aLi.length;i++){
+            aLi[i].index = i;
+            aLi[i].setAttribute('tag',true)
+            console.log(aLi[i]);
+        }
+
+        var oP = document.querySelector('p');
+
+        // dataset 设置一个属性
+        // 直接在html中写
+        // 在js里通过 oDiv.dataset.xxx = xxx
+        oP.dataset.index = 1;
+
+        // 获取 dataset设置的属性
+        // oDiv.dataset.xxx
+        // oDiv.dataset 返回的是一个对象
+        // 在js里获取属性的话 item-key => itemKey
+
+        // oDiv.dataset.item-key => itemKey
+
+        // 给一个dom元素设置自定义属性的方法
+        // 1. oDiv.key = value  在html中看不到
+        // 2. oDiv.setAttribute(key, value)
+        // 3. oDiv.dataset.key = value
+        // 4. <div data-key=value > </div>
+
+        // 获取dom元素自定义属性
+        // 1.oDiv.getAttribute(key)
+        // 2.oDiv.key
+        // 3.oDiv.dataset.key key需要用驼峰写法
+
+        // 区别
+        // setAttribute/dataset 可以在html中看到
+        // oDiv.key 在html中看不到
+
+        // dataset 自定义数据属性的一个实例 -- 图片懒加载
+
+
+    </script>
+</body>
+</html>

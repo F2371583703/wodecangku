@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        /* 选择器
+          1.基本选择器
+          2.关系选择器
+          3.属性选择器
+          4.伪类选择器
+          5.伪元素选择器
+         */
+
+
+        /* 紧邻后面的兄弟 */
+        .list+li{
+            background-color: red;
+        }
+        /* 后面所有的兄弟 */
+        .list~li{
+            color: blue;
+        }
+        /* 属性选择器 */
+        li[class]{
+            background-color: green;
+        }
+        /* =后面的元素只有aaa的 */
+        li[class="aaa"]{
+            color: #fff;
+        }
+        /* ~=可以有多个值 后面的元素含有aaa的 */
+        /* ^=以a开头的所有元素 */
+        /* $=以a结尾的所有元素 */
+        /* *=一个值里面包含aa的所有元素 */
+    </style>
+</head>
+<body>
+    <ul>
+        <li name='aaa' index=1>1</li>
+        <li class="aaa">2</li>
+        <li class="list">3</li>
+        <li>4</li>
+        <li>5</li>
+    </ul>
+</body>
+</html>

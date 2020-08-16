@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #parents{
+            height: 300px;
+            display: flex;
+        }
+        #left{
+            /* width: 200px; */
+            height: 100%;
+            background: red;
+            flex: 0 0 200px;
+        }
+        #reight{
+            /* width: 200px; */
+            height: 100%;
+            background: blue;
+            flex: 0 0 200px;
+        }
+        #center{
+            height: 100%;
+            /* flex-grow: 1; */
+            background: aqua;
+            flex: auto;
+        }
+    </style>
+</head>
+<body>
+    <div id="parents">
+        <div id="left"></div>
+        <div id="center"></div>
+        <div id="reight"></div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            background: #000;
+            -webkit-perspective: 800px;
+            perspective: 800px;
+        }
+        #container{
+            width: 200px;
+            height: 200px;
+            margin: 50px auto;
+            position: relative;
+            top: 200px;
+            /* left: 200PX; */
+            /* 将子元素3D化展示 */
+            transform-style: preserve-3d;
+            /* infinite 无限循环 */
+            animation: run 2s linear infinite;
+
+            /* transform-origin: -200px -200px; */
+        }
+        #container>div{
+            width: 200px;
+            height: 200px;
+            font-size: 40px;
+            text-align: center;
+            line-height: 200px;
+            border-radius: 10px;
+            background: rgba(255,255,255,0.5);
+            position: absolute;
+            top: 0;
+            left: 0;      
+        }
+        @keyframes run{
+            0%{}
+            100%{
+                transform: rotateY(360deg)  rotateZ(360deg);
+            }
+        }
+        #one{
+            -webkit-transform: rotateX(90deg) translateZ(100px);
+            transform: rotateX(90deg) translateZ(100px);
+            
+        }
+        #two{
+            z-index: 1;
+            -webkit-transform:translateZ(100px);
+            transform:translateZ(100px);
+        }
+        #three{
+            -webkit-transform: rotateX(-90deg) translateZ(100px);
+            transform: rotateX(-90deg) translateZ(100px);
+        }
+        #four{
+            -webkit-transform:translateZ(-100px) rotateZ(180deg);
+            transform:translateZ(-100px) rotateZ(180deg);
+        }
+        #five{
+            -webkit-transform: rotateY(90deg) translateZ(100px);
+            transform: rotateY(90deg) translateZ(100px);
+        }
+        #six{
+            -webkit-transform: rotateY(90deg) translateZ(-100px);
+            transform: rotateY(90deg) translateZ(-100px);
+        }
+
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="one">1</div>
+        <div id="two">2</div>
+        <div id="three">3</div>
+        <div id="four">4</div>
+        <div id="five">5</div>
+        <div id="six">6</div>
+    </div>
+</body>
+</html>

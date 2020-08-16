@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        /* #can{
+            width: 200px;
+            height: 200px;
+            background: red;
+        
+        } */
+    </style>
+</head>
+<body>
+    <canvas id="can" width="600" height="600"></canvas>
+
+    <script>
+        var canvas = document.getElementById('can');
+        var context = canvas.getContext('2d');
+
+        // beginPath 定义一个新路径绘制动作开始
+        context.beginPath();
+        // moveTo 指定点创建一个新子路径
+        context.moveTo(100,150);
+        // lineTo 以上下文点为起点，到方法参数中指定的点之间画一条直线
+        context.lineTo(450,50);
+        // lineWidth 设置线的宽度
+        context.lineWidth = 15;
+        // lineCap 改变线的端点样式 round圆弧
+        context.lineCap = 'round';
+        // strokeStyle 为所画的线赋予颜色
+        context.strokeStyle = 'red';
+        context.stroke();
+
+
+
+    </script>
+</body>
+</html>

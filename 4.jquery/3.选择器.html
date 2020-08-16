@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #div1{
+            /* 隐藏元素 */
+            display: none;
+            width: 200px;
+            height: 200px;
+            background: red;
+            /* 可见元素 视觉不可见 但元素存在 */
+            /* opacity: 0; */
+            /* visibility: hidden; */
+        }
+        #div1{
+            /* 去掉元素 */
+            /* display: none; */
+            width: 200px;
+            height: 200px;
+            background: red;
+            /* 隐藏元素 */
+            /* opacity: 0; */
+            visibility: hidden;
+        }
+    </style>
+</head>
+<body>
+    <div id="div1">123456</div>
+    <p>123456789</p>
+    <div id="div2">67890</div>
+
+    <script src="jQuery.js"></script>
+    <script>
+        // visible选择所有可见元素
+        console.log($('div:visible'));
+        // hidden选择所有隐藏的元素
+        console.log($('div:hidden'));
+    </script>
+</body>
+</html>

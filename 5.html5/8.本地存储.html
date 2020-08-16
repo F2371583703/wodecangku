@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 本地储存
+        cookie 存储量为4k 可以设置过期时间，如果不设置的话浏览器窗口关闭之后就没了
+        localStorage 本地储存 可存数据大小为5M 会永久的存储在浏览器中，除非手动删除
+        sessionStorage 会话缓存 可存储的大小为5M 浏览器窗口关闭之后就没了
+     -->
+    <script>
+        // localStorage 本地储存 可存数据大小为5M 会永久的存储在浏览器中，除非手动删除
+        // 设置
+        // 1.localStorage.key = value;
+        // 2.localStorage.nsetItem(key,value);
+        // 获取
+        // 1.localStorage.key;
+        // 2.localStorage.getItem(key);
+
+        // setItem 设置本地储存
+        localStorage.name = 'wxc';
+        localStorage.setItem('age',18)
+
+        // getItem 获取本地储存的元素
+        console.log(localStorage);
+        console.log(localStorage.getItem('age'));
+
+        // sessionStorage 会话缓存 可存储的大小为5M 浏览器窗口关闭之后就没了
+        // 设置会话缓存
+        sessionStorage.weight = '123kg';
+        sessionStorage.setItem('height','170cm');
+
+        // 获取会话缓存
+        console.log(sessionStorage.weight);
+        console.log(sessionStorage.getItem('height'));
+
+
+
+
+    </script>
+</body>
+</html>

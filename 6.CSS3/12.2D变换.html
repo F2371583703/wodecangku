@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .wrapper{
+            width: 200px;
+            height: 200px;
+            margin: 100px auto;
+            border: 1px solid #000;
+            position: relative;
+            /* 位移百分百是自身宽高的百分百 */
+            /* transform: translateX(50%) translateY(50%); */
+        }
+        .inner{
+            width: 200px;
+            height: 200px;
+            background: red;
+            /* 水平居中 垂直居中 */
+            /* position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%); */
+            /* 上下两种效果一样 */
+            /* transform: translateX(-50%) translateY(-50%); */
+            
+            /* 旋转角度 */
+            /* transform: rotate(-45deg); */
+            /* 旋转的中心点 */
+            /* transform-origin: 200px 0; */
+
+            /* scaleX 水平方向上缩放 scaleY 竖直方向缩放 */
+            /* transform: scaleX(0.5); */
+
+            /* 变平行四边形 */
+            transform: skew(30deg);
+
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="inner"></div>
+    </div>
+
+
+</body>
+</html>
