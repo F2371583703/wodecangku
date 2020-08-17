@@ -1,0 +1,20 @@
+div{
+    width: 300px;
+    height: 300px;
+    background: pink;
+}
+/* @media 多个条件用and连接 写在最下面 写在上面有可能被覆盖 */
+/* max-width 最大的宽度 */
+/* 480~980 */
+@media screen and (max-width:980px){
+    div{
+        background: yellow;
+    }
+}
+/* screen 彩色屏幕 */
+/* <=480 */
+@media screen and (max-width:480px){
+    div{
+        background: green;
+    }
+}
