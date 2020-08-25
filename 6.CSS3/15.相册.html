@@ -1,21 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <style>
-        *{
+        * {
             margin: 0;
             padding: 0;
         }
-        body{
+        
+        body {
             background: #000;
             -webkit-perspective: 1200px;
             perspective: 800px;
         }
-        #container{
+        
+        #container {
             width: 216px;
             height: 288px;
             margin: 50px auto;
@@ -26,10 +29,10 @@
             transform-style: preserve-3d;
             /* infinite 无限循环 */
             animation: run 5s linear infinite;
-
             /* transform-origin: -200px -200px; */
         }
-        #container>div{
+        
+        #container>div {
             width: 216px;
             height: 288px;
             /* font-size: 40px; */
@@ -42,62 +45,72 @@
             left: 0;
             overflow: hidden;
         }
-        @keyframes run{
-            0%{}
-            100%{
+        
+        @keyframes run {
+            0% {}
+            100% {
                 transform: rotateY(360deg);
             }
         }
-        #container>div>img{
+        
+        #container>div>img {
             width: 216px;
         }
-        #one{
+        
+        #one {
             -webkit-transform: rotateX(90deg) translateZ(300px);
             transform: rotateX(90deg) translateZ(300px);
         }
-        #two{
+        
+        #two {
             z-index: 1;
-            -webkit-transform:translateZ(300px);
-            transform:translateZ(300px);
+            -webkit-transform: translateZ(300px);
+            transform: translateZ(300px);
         }
-        #three{
+        
+        #three {
             -webkit-transform: rotateX(-90deg) translateZ(300px);
             transform: rotateX(-90deg) translateZ(300px);
         }
-        #four{
-            -webkit-transform:translateZ(-300px);
-            transform:translateZ(-300px);
+        
+        #four {
+            -webkit-transform: translateZ(-300px);
+            transform: translateZ(-300px);
         }
-        #five{
+        
+        #five {
             -webkit-transform: rotateY(90deg) translateZ(300px);
             transform: rotateY(90deg) translateZ(300px);
         }
-        #six{
+        
+        #six {
             -webkit-transform: rotateY(90deg) translateZ(-300px);
             transform: rotateY(90deg) translateZ(-300px);
         }
     </style>
 </head>
+
 <body>
     <div id="container">
         <div id="one">
-            <img src="../../../素材/李雯/psb (1).jpg" alt="">
+            <img src="../李雯/psb (2).jpg" alt="">
         </div>
         <div id="two">
-            <img src="../../../素材/李雯/处理后/李雯(6).jpg" alt="">
+            <img src="../李雯/李雯(6).jpg" alt="">
         </div>
         <div id="three">
-            <img src="../../../素材/李雯/psc (1).jpg" alt="">
+            <img src="../李雯/psc (1).jpg" alt="">
         </div>
         <div id="four">
-            <img src="../../../素材/李雯/psb (5).jpg" alt="">
+            <img src="../李雯/psb (5).jpg" alt="">
         </div>
         <div id="five">
-            <img src="../../../素材/李雯/psc (2).jpg" alt="">
+            <img src="../李雯/psc (2).jpg" alt="">
         </div>
         <div id="six">
-            <img src="../../../素材/李雯/psb.jpg" alt="">
+            <img src="../李雯/psb.jpg" alt="">
         </div>
     </div>
 </body>
+
 </html>
