@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 正则表达式的定义   严格校验大小写
+        // var reg = /abc/;
+        // var reg1 = new RegExp('abc');
+
+        // var str = 'abcdefg';
+        // var str2 = '1234567abc';
+        // var str3 = 'aaaaaaa';
+
+        // var regstr = 'hello'
+        // var reg2 = /regstr/
+        // var reg3 = new RegExp(regstr);
+
+        // exec 检索正则表达式中出现的值
+        // reg.exec(str) 如果能匹配到的话返回的是一个array
+        // 第0项返回的是匹配的内容 index 表示的是索引
+        // 如果没有匹配成功返回null
+        // console.log(reg1.exec(str));
+        // console.log(reg.exec(str2));
+        // console.log(reg1.exec(str3));
+
+        // reg.test(str) 匹配字符串 如果匹配成功返回true 匹配失败返回false
+        // console.log(reg.test(str));
+        // console.log(reg.test(str3));
+
+        // c{n} n个连续的c
+        // var reg = /c{2}/
+        // var str = 'xioaajnsjccaad'
+        // console.log(reg.exec(str));
+
+        // c{m,n}大于等于m小于等于n个连续的c  
+        // var reg = /c{1,2}/
+        // var str = 'cccccaac'
+        // console.log(reg.exec(str));
+
+        // c{n,} 大于等于n个连续的c
+        // var reg = /c{2,}/
+
+        // c* 大于等于0个连续的c 等同于c{0,}
+        // var reg = /a*/
+        // var str = 'bcdef'
+        // console.log(reg.exec(str));
+
+        // c+大于等于1个连续的c  等价于c{1,}
+        // var reg = /c+/
+        // var str = 'xiaoccainiao'
+        // console.log(reg.exec(str));
+
+        // c? 大于等于0个小于等于1个 满足0个就算成功
+        // var reg = /c?/
+        // var str = 'acacs'
+        // console.log(reg.exec(str));
+
+        // ? 非贪婪 尽可能少的匹配
+        // a?? 第一个问号表示的是数量{0，1} 第二个？ 表示非贪婪
+        // var reg = /a{1,}?/
+        // var str = 'aavbahba'
+        // console.log(reg.exec(str));
+
+        // ^c 以c开头的   c$ 以c结尾的
+        // var reg = /^c/
+        // var str = 'aavbachba'
+        // console.log(reg.exec(str));
+
+        // . 表示的是出\n之外所有的字符
+        // var reg = /./
+        // var str = 'aavba\nchba'
+        // console.log(reg.exec(str));
+
+        // b|c匹配到b或者c
+        // var reg = /b|c/
+        // var str = 'aavbachba'
+        // console.log(reg.exec(str));
+
+        // () 先判断括号内部的
+        // var reg = /^(b|c).+/
+        // var str = 'aavbachba'
+        // console.log(reg.exec(str));
+
+        // [abc] 满足[]内的任意一个字符
+        // var reg = /^[abc]/
+        // var str = 'aavbachba'
+        // console.log(reg.exec(str));
+
+        // [a-z]所有的小写字母
+        // [A-Z]所有的大写字母
+        // [0-9]数字
+        // [a-zA-Z0-9]字母数字
+
+        // [^a-z] 非小写字母 ^[a-z]以小写字母开头
+        // [^A-z]非字母
+        // ^在字符集合中表示的是非
+
+        // \b边界 匹配字符的边界，也就是他匹配的是一个位置，而不是一个真正的字符
+        // 此位置一侧是字符，另一侧是非字符或者字符串 （开始或结束的位置）
+        // /\bc/表示左边界 /c\b/表示右边界
+        // \B表示的是非边界
+        // var reg = /\bc/
+        // var str = 'aav cbachb'
+        // console.log(reg.exec(str));
+
+        // \d表示数字
+        // \D表示非数字
+        // \n换行
+        // \s单个空格
+        // \S非空格字符
+        // \w字母和数字 =>[a-zA-Z0-9]
+        // \W非字母和数字
+
+        // var reg = /(\w)(\w)/
+        // var str = 'aavbachba'
+        // console.log(reg.exec(str));
+
+        // var reg = /(\w)\1/
+        // var str = 'aavbachba'
+        // console.log(reg.exec(str));
+
+        // var reg = /(\w)(\w)\2\1/
+        // var str = 'woow'
+        // console.log(reg.exec(str));
+
+        // ?:不记录子表达式结果内容
+        // var reg = /^(?:b|c).+/
+        // var str = 'bccxdadvscaca'
+        // console.log(reg.exec(str));
+
+        // var reg = /^(b|c)\1/
+        // var str = 'bbccxdadvscaca'
+        // console.log(reg.exec(str));
+
+        // (?=idea) 后面必须紧跟着idea (?!idea) 后面不能紧跟着idea
+
+        // 匹配元字符 * + ? 只要在前面加一个“\”就可以了
+        // /c\*/就能匹配到‘c*’
+
+        // g修饰符  全局匹配  调用之后会更改reg.lastIndex值
+        // var reg = /b/g
+        // var str = 'bccxdadvbscaca'
+        // console.log(reg.lastIndex);
+        // console.log(reg.exec(str));
+        // console.log(reg.lastIndex);
+        // console.log(reg.exec(str));
+        // i修饰符 不区分大小写
+
+
+        // 支持正则表达式的String对象的方法
+
+        // search查找返回索引
+        // var str = 'hello world'
+        // console.log(str.search('e'));
+
+        // match返回内容
+        // var str = 'visit w3school!'
+        // document.write(str.match(/w3school/))
+
+        // replace替换正则表达式内容
+        // var str = 'visit w3school!'
+        // document.write(str.replace(/w3school/, 'aaaaa'))
+
+        // split 把字符串分割为字符串数组
+    </script>
+</body>
+
+</html>
